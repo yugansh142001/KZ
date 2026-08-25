@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KZ Creative — Handmade Gifts by Kainaat Zenith</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Marck+Script&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF3EE;
+    --cream-deep:#F6E9E1;
+    --rose:#A31545;
+    --rose-deep:#7A0F34;
+    --rose-soft:#E8A3B8;
+    --gold:#B98A4A;
+    --ink:#2B2320;
+    --line: rgba(163,21,69,0.18);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Jost', sans-serif;
+    font-weight:300;
+    overflow-x:hidden;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+
+  /* ---------- decorative petal system ---------- */
+  .petal-field{position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:0;}
+  .petal{
+    position:absolute; border-radius:50% 0 50% 50%;
+    background: radial-gradient(circle at 30% 30%, var(--rose-soft), var(--rose) 120%);
+    opacity:0.35;
+  }
+
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 28px;}
+
+  /* ---------- nav ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(251,243,238,0.88);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:1100px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:'Cormorant Garamond', serif; font-weight:600; font-size:1.35rem; letter-spacing:0.04em; color:var(--rose-deep);}
+  .brand .kz{
+    width:38px; height:38px; border-radius:50%;
+    border:1.5px solid var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    font-size:0.85rem; font-family:'Cormorant Garamond', serif; font-weight:600;
+  }
+  .nav-links{display:flex; gap:28px; font-size:0.82rem; letter-spacing:0.08em; text-transform:uppercase;}
+  .nav-links a{opacity:0.75; transition:opacity 0.25s;}
+  .nav-links a:hover{opacity:1; color:var(--rose);}
+  .nav-cta{
+    background:var(--rose); color:#fff; padding:9px 20px; border-radius:999px;
+    font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase;
+    display:flex; align-items:center; gap:6px;
+    transition:background 0.25s, transform 0.25s;
+  }
+  .nav-cta:hover{background:var(--rose-deep); transform:translateY(-1px);}
+  @media (max-width:720px){ .nav-links{display:none;} }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    padding:88px 28px 70px;
+    text-align:center;
+    border-bottom:1px solid var(--line);
+  }
+  .badge{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--rose); color:#fff;
+    padding:8px 22px; border-radius:999px;
+    font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase;
+    margin-bottom:34px;
+    opacity:0; animation: rise 0.8s ease forwards 0.1s;
+  }
+  .mono{
+    width:118px; height:118px; margin:0 auto 22px;
+    border:1.5px solid var(--gold); border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Cormorant Garamond', serif;
+    position:relative;
+    opacity:0; animation: rise 0.8s ease forwards 0.25s;
+  }
+  .mono span{font-size:2.6rem; font-weight:600;}
+  .mono .k{color:var(--ink);}
+  .mono .z{color:var(--rose-soft); margin-left:-6px;}
+  h1{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:clamp(2.4rem, 6vw, 4.2rem);
+    line-height:1.05;
+    color:var(--rose-deep);
+    opacity:0; animation: rise 0.8s ease forwards 0.4s;
+  }
+  .script{
+    font-family:'Marck Script', cursive;
+    font-size:clamp(1.6rem, 3.4vw, 2.3rem);
+    color:var(--rose);
+    display:block;
+    margin-top:6px;
+    opacity:0; animation: rise 0.8s ease forwards 0.55s;
+  }
+  .tagline{
+    max-width:520px; margin:26px auto 0;
+    font-size:1.05rem; line-height:1.7; color:var(--ink); opacity:0.8;
+    opacity:0; animation: rise 0.8s ease forwards 0.7s;
+  }
+  .hero-ctas{
+    display:flex; gap:16px; justify-content:center; flex-wrap:wrap;
+    margin-top:38px;
+    opacity:0; animation: rise 0.8s ease forwards 0.85s;
+  }
+  .btn-primary{
+    background:var(--rose); color:#fff; padding:15px 34px; border-radius:999px;
+    font-size:0.88rem; letter-spacing:0.05em; text-transform:uppercase;
+    display:inline-flex; align-items:center; gap:10px;
+    box-shadow:0 10px 26px -10px rgba(163,21,69,0.55);
+    transition:transform 0.25s, box-shadow 0.25s;
+  }
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 14px 30px -10px rgba(163,21,69,0.6);}
+  .btn-ghost{
+    border:1.3px solid var(--gold); color:var(--rose-deep); padding:14px 30px; border-radius:999px;
+    font-size:0.88rem; letter-spacing:0.05em; text-transform:uppercase;
+    display:inline-flex; align-items:center; gap:10px;
+    transition:background 0.25s, transform 0.25s;
+  }
+  .btn-ghost:hover{background:var(--cream-deep); transform:translateY(-2px);}
+
+  @keyframes rise{ from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:translateY(0);} }
+
+  /* ---------- divider ---------- */
+  .divider{
+    display:flex; align-items:center; justify-content:center; gap:14px;
+    padding:34px 0; color:var(--gold);
+  }
+  .divider .ln{width:70px; height:1px; background:var(--gold); opacity:0.5;}
+
+  /* ---------- offerings ---------- */
+  section{padding:64px 28px;}
+  .eyebrow{
+    text-align:center; font-size:0.75rem; letter-spacing:0.22em; text-transform:uppercase;
+    color:var(--rose); margin-bottom:10px;
+  }
+  h2{
+    text-align:center; font-family:'Cormorant Garamond', serif; font-weight:600;
+    font-size:clamp(1.8rem, 4vw, 2.6rem); color:var(--rose-deep); margin-bottom:44px;
+  }
+  .offer-grid{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:22px; max-width:1000px; margin:0 auto;
+  }
+  @media (max-width:900px){ .offer-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:520px){ .offer-grid{grid-template-columns:1fr;} }
+  .offer-card{
+    background:#fff; border:1px solid var(--line); border-radius:18px;
+    padding:32px 22px; text-align:center;
+    transition:transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  }
+  .offer-card:hover{transform:translateY(-5px); box-shadow:0 16px 34px -18px rgba(163,21,69,0.35); border-color:var(--rose-soft);}
+  .offer-icon{
+    width:52px; height:52px; margin:0 auto 16px;
+    border-radius:50%; background:var(--cream-deep);
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.4rem;
+  }
+  .offer-card h3{font-family:'Cormorant Garamond', serif; font-weight:600; font-size:1.2rem; margin-bottom:8px; color:var(--ink);}
+  .offer-card p{font-size:0.86rem; color:var(--ink); opacity:0.65; line-height:1.5;}
+
+  /* ---------- philosophy / signature quote ---------- */
+  .quote-section{
+    background:var(--rose-deep);
+    color:var(--cream);
+    text-align:center;
+    padding:80px 28px;
+    position:relative;
+  }
+  .quote-section .script{
+    font-size:clamp(1.5rem, 4vw, 2.4rem);
+    line-height:1.6;
+    color:#fff;
+    max-width:640px; margin:0 auto;
+    opacity:1; animation:none;
+  }
+  .quote-by{margin-top:22px; font-size:0.78rem; letter-spacing:0.15em; text-transform:uppercase; opacity:0.7;}
+
+  /* ---------- connect ---------- */
+  .connect-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:60px; max-width:1000px; margin:0 auto; align-items:start;
+  }
+  @media (max-width:800px){ .connect-grid{grid-template-columns:1fr; gap:44px;} }
+
+  .contact-list{display:flex; flex-direction:column; gap:0;}
+  .contact-row{
+    display:flex; align-items:center; gap:16px;
+    padding:18px 0; border-bottom:1px dashed var(--line);
+  }
+  .contact-row .ic{
+    width:44px; height:44px; border-radius:50%;
+    background:var(--rose); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;
+  }
+  .contact-row .label{font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; opacity:0.55;}
+  .contact-row .value{font-family:'Cormorant Garamond', serif; font-weight:600; font-size:1.15rem; color:var(--ink);}
+  .contact-row a.value:hover{color:var(--rose);}
+
+  .form-card{
+    background:#fff; border:1px solid var(--line); border-radius:20px; padding:34px;
+  }
+  .form-card h3{font-family:'Cormorant Garamond', serif; font-size:1.3rem; margin-bottom:6px; color:var(--rose-deep);}
+  .form-card .sub{font-size:0.84rem; opacity:0.6; margin-bottom:24px;}
+  .field{margin-bottom:16px;}
+  .field label{display:block; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; opacity:0.6; margin-bottom:6px;}
+  .field input, .field textarea{
+    width:100%; border:1px solid var(--line); border-radius:10px; padding:12px 14px;
+    font-family:'Jost', sans-serif; font-size:0.92rem; background:var(--cream);
+    transition:border-color 0.25s;
+  }
+  .field input:focus, .field textarea:focus{outline:none; border-color:var(--rose);}
+  .field textarea{resize:vertical; min-height:90px;}
+  .submit-btn{
+    width:100%; background:var(--rose); color:#fff; border:none; padding:14px; border-radius:10px;
+    font-size:0.85rem; letter-spacing:0.06em; text-transform:uppercase; cursor:pointer;
+    transition:background 0.25s;
+  }
+  .submit-btn:hover{background:var(--rose-deep);}
+  .form-note{font-size:0.76rem; opacity:0.55; margin-top:12px; text-align:center;}
+
+  /* ---------- footer ---------- */
+  footer{
+    text-align:center; padding:36px 28px; border-top:1px solid var(--line);
+    font-size:0.78rem; letter-spacing:0.05em; opacity:0.6;
+  }
+  footer .heart{color:var(--rose);}
+
+  :focus-visible{outline:2px solid var(--rose); outline-offset:3px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <span class="kz"><span style="color:var(--ink)">K</span><span style="color:var(--rose-soft); margin-left:-4px;">Z</span></span>
+      KZ Creative
+    </div>
+    <nav class="nav-links">
+      <a href="#offerings">Offerings</a>
+      <a href="#philosophy">Philosophy</a>
+      <a href="#connect">Connect</a>
+    </nav>
+    <a class="nav-cta" href="https://instagram.com/kainaatzenith" target="_blank" rel="noopener">Message Us →</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="petal-field" id="petals"></div>
+  <div style="position:relative; z-index:1;">
+    <div class="badge">♥ Handmade With Love ♥</div>
+    <div class="mono"><span class="k">K</span><span class="z">Z</span></div>
+    <h1>KZ Creative<span class="script">crafting uniqueness, by Minakshi Puri</span></h1>
+    <p class="tagline">Customised gifts, birthday return gifts, colouring kits, and more — every piece made by hand, made for you.</p>
+    <div class="hero-ctas">
+      <a class="btn-primary" href="https://instagram.com/kainaatzenith" target="_blank" rel="noopener">📷 Message on Instagram</a>
+      <a class="btn-ghost" href="tel:+917986041515">📞 Call +91 79860 41515</a>
+    </div>
+  </div>
+</section>
+
+<section id="offerings">
+  <div class="eyebrow">What We Make</div>
+  <h2>Handmade, just for you</h2>
+  <div class="offer-grid">
+    <div class="offer-card">
+      <div class="offer-icon">🎁</div>
+      <h3>Customised Gifts</h3>
+      <p>Personalised pieces designed around the person you're giving them to.</p>
+    </div>
+    <div class="offer-card">
+      <div class="offer-icon">🎂</div>
+      <h3>Birthday Return Gifts</h3>
+      <p>Thoughtful favours for guests, made in the quantity your party needs.</p>
+    </div>
+    <div class="offer-card">
+      <div class="offer-icon">🎨</div>
+      <h3>Colouring Kits</h3>
+      <p>Hand-assembled kits to keep young hands creative and busy.</p>
+    </div>
+    <div class="offer-card">
+      <div class="offer-icon">✨</div>
+      <h3>And More</h3>
+      <p>Have something specific in mind? Message us — most requests are welcome.</p>
+    </div>
+  </div>
+</section>
+
+<section id="philosophy" class="quote-section">
+  <span class="script">"We don't just create gifts, we create memories, you live your dreams."</span>
+  <div class="quote-by">— KZ Creative</div>
+</section>
+
+<section id="connect">
+  <div class="eyebrow">Get In Touch</div>
+  <h2>Let's create something together</h2>
+  <div class="connect-grid">
+    <div class="contact-list">
+      <div class="contact-row">
+        <div class="ic">📞</div>
+        <div>
+          <div class="label">Call or WhatsApp</div>
+          <a class="value" href="tel:+917986041515">+91 79860 41515</a>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="ic">📷</div>
+        <div>
+          <div class="label">Instagram</div>
+          <a class="value" href="https://instagram.com/kainaatzenith" target="_blank" rel="noopener">@kainaatzenith</a>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="ic">▶️</div>
+        <div>
+          <div class="label">YouTube</div>
+          <a class="value" href="https://youtube.com/@kainaatzenith" target="_blank" rel="noopener">@kainaatzenith</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h3>Send an enquiry</h3>
+      <p class="sub">Prefer Instagram or a call for a faster reply — but if you'd rather write it out, send it here.</p>
+      <form onsubmit="event.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const contact = document.getElementById('contact').value.trim();
+        const msg = document.getElementById('msg').value.trim();
+        const text = `Hi KZ Creative! I'm ${name} (${contact}). ${msg}`;
+        const url = 'https://wa.me/917986041515?text=' + encodeURIComponent(text);
+        window.open(url, '_blank');
+      ">
+        <div class="field">
+          <label for="name">Your Name</label>
+          <input id="name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="contact">Phone or Email</label>
+          <input id="contact" type="text" required>
+        </div>
+        <div class="field">
+          <label for="msg">What are you looking for?</label>
+          <textarea id="msg" required></textarea>
+        </div>
+        <button class="submit-btn" type="submit">Send via WhatsApp</button>
+      </form>
+      <p class="form-note">Opens WhatsApp with your message pre-filled — you just hit send.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="heart">♥</span> Made with love, just for you <span class="heart">♥</span> — KZ Creative © 2026
+</footer>
+
+<script>
+  const field = document.getElementById('petals');
+  const positions = [
+    {top:'6%', left:'4%', size:34, rot:-20},
+    {top:'14%', left:'11%', size:20, rot:40},
+    {top:'70%', left:'92%', size:38, rot:15},
+    {top:'82%', left:'86%', size:22, rot:-30},
+    {top:'50%', left:'2%', size:16, rot:60},
+  ];
+  positions.forEach((p,i)=>{
+    const el = document.createElement('div');
+    el.className='petal';
+    el.style.top=p.top; el.style.left=p.left;
+    el.style.width=p.size+'px'; el.style.height=p.size+'px';
+    el.style.transform=`rotate(${p.rot}deg)`;
+    el.style.animation=`float${i%2} ${6+i}s ease-in-out infinite`;
+    field.appendChild(el);
+  });
+  const styleTag = document.createElement('style');
+  styleTag.textContent = `
+    @keyframes float0{0%,100%{transform:translateY(0) rotate(0deg);} 50%{transform:translateY(-12px) rotate(8deg);}}
+    @keyframes float1{0%,100%{transform:translateY(0) rotate(0deg);} 50%{transform:translateY(10px) rotate(-6deg);}}
+  `;
+  document.head.appendChild(styleTag);
+</script>
+
+</body>
+</html>
