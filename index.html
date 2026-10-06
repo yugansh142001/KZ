@@ -1,1553 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>KZ Creative | Handmade Gifts & Custom Creations</title>
-
-<meta name="description"
-content="KZ Creative creates beautiful handmade gifts, candles, pops, customised return gifts and creative pieces made with love.">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KZ Creative | Handmade candles, pops and customised gifts</title>
+<meta name="description" content="KZ Creative makes handmade candles, cake pops, customised gifts and return gifts. Browse the collection and enquire on WhatsApp.">
+<meta property="og:title" content="KZ Creative: Handmade with love, made just for you">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&family=Marck+Script&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
 <style>
-
-/* =========================================================
-   ROOT
-========================================================= */
-
-:root{
-  --cream:#FBF4EF;
-  --cream-2:#F5E7DE;
-  --white:#FFFFFF;
-
-  --rose:#A31545;
-  --rose-dark:#760E32;
-  --rose-light:#E7A4B9;
-
-  --gold:#B88A4B;
-
-  --text:#2C2421;
-  --muted:#756B67;
-
-  --border:rgba(163,21,69,.14);
-
-  --shadow:0 18px 50px rgba(77,30,43,.10);
-
-  --radius:22px;
-}
-
-
-/* =========================================================
-   RESET
-========================================================= */
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  background:var(--cream);
-  color:var(--text);
-  font-family:'Jost',sans-serif;
-  font-weight:400;
-  overflow-x:hidden;
-}
-
-img{
-  max-width:100%;
-  display:block;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-button{
-  font-family:inherit;
-}
-
-.container{
-  width:min(1160px, calc(100% - 40px));
-  margin:auto;
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-header{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index:1000;
-
-  background:rgba(251,244,239,.88);
-  backdrop-filter:blur(18px);
-
-  border-bottom:1px solid var(--border);
-}
-
-.nav{
-  min-height:76px;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
-}
-
-.logo{
-  display:flex;
-  align-items:center;
-  gap:12px;
-
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.5rem;
-  font-weight:700;
-
-  color:var(--rose-dark);
-}
-
-.logo-circle{
-  width:42px;
-  height:42px;
-
-  border:1.5px solid var(--gold);
-  border-radius:50%;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-size:.95rem;
-}
-
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:30px;
-
-  font-size:.78rem;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-}
-
-.nav-links a{
-  color:var(--text);
-  opacity:.72;
-  transition:.25s;
-}
-
-.nav-links a:hover{
-  color:var(--rose);
-  opacity:1;
-}
-
-.nav-button{
-  background:var(--rose);
-  color:white;
-
-  padding:11px 21px;
-  border-radius:100px;
-
-  font-size:.76rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-
-  transition:.25s;
-}
-
-.nav-button:hover{
-  background:var(--rose-dark);
-  transform:translateY(-2px);
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero{
-  min-height:100vh;
-
-  padding:150px 0 90px;
-
-  display:flex;
-  align-items:center;
-
-  position:relative;
-  overflow:hidden;
-}
-
-.hero::before{
-  content:"";
-
-  position:absolute;
-
-  width:520px;
-  height:520px;
-
-  border-radius:50%;
-
-  background:radial-gradient(
-    circle,
-    rgba(231,164,185,.28),
-    transparent 68%
-  );
-
-  top:-160px;
-  right:-120px;
-}
-
-.hero::after{
-  content:"";
-
-  position:absolute;
-
-  width:400px;
-  height:400px;
-
-  border-radius:50%;
-
-  background:radial-gradient(
-    circle,
-    rgba(184,138,75,.10),
-    transparent 70%
-  );
-
-  bottom:-200px;
-  left:-150px;
-}
-
-.hero-grid{
-  display:grid;
-
-  grid-template-columns:1.05fr .95fr;
-
-  align-items:center;
-
-  gap:70px;
-
-  position:relative;
-  z-index:2;
-}
-
-.hero-label{
-  display:inline-flex;
-  align-items:center;
-  gap:9px;
-
-  background:var(--rose);
-  color:white;
-
-  padding:8px 18px;
-
-  border-radius:100px;
-
-  font-size:.68rem;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-
-  margin-bottom:25px;
-}
-
-.hero h1{
-  font-family:'Cormorant Garamond',serif;
-
-  font-size:clamp(3.2rem,7vw,6.2rem);
-
-  line-height:.92;
-
-  font-weight:600;
-
-  color:var(--rose-dark);
-}
-
-.hero-script{
-  display:block;
-
-  margin-top:13px;
-
-  font-family:'Marck Script',cursive;
-
-  font-size:clamp(2rem,4vw,3rem);
-
-  color:var(--rose);
-}
-
-.hero-description{
-  max-width:570px;
-
-  margin-top:27px;
-
-  color:var(--muted);
-
-  font-size:1.02rem;
-
-  line-height:1.8;
-}
-
-.hero-buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:13px;
-
-  margin-top:35px;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:9px;
-
-  padding:14px 25px;
-
-  border-radius:100px;
-
-  font-size:.78rem;
-
-  letter-spacing:.07em;
-
-  text-transform:uppercase;
-
-  transition:.25s;
-}
-
-.btn-primary{
-  background:var(--rose);
-  color:white;
-
-  box-shadow:0 15px 35px rgba(163,21,69,.20);
-}
-
-.btn-primary:hover{
-  background:var(--rose-dark);
-  transform:translateY(-3px);
-}
-
-.btn-outline{
-  border:1px solid var(--gold);
-
-  color:var(--rose-dark);
-
-  background:transparent;
-}
-
-.btn-outline:hover{
-  background:var(--cream-2);
-  transform:translateY(-3px);
-}
-
-
-/* HERO VISUAL */
-
-.hero-visual{
-  min-height:500px;
-
-  position:relative;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.hero-card{
-  width:min(390px,90%);
-
-  aspect-ratio:4/5;
-
-  border-radius:190px 190px 25px 25px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #f5d8dd,
-      #fff5ef
-    );
-
-  border:1px solid rgba(163,21,69,.15);
-
-  box-shadow:var(--shadow);
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  position:relative;
-
-  overflow:hidden;
-}
-
-.hero-card::before{
-  content:"";
-
-  width:230px;
-  height:230px;
-
-  border-radius:50%;
-
-  background:rgba(255,255,255,.55);
-
-  position:absolute;
-
-  top:55px;
-}
-
-.hero-monogram{
-  position:relative;
-  z-index:2;
-
-  width:150px;
-  height:150px;
-
-  border:1px solid var(--gold);
-
-  border-radius:50%;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-family:'Cormorant Garamond',serif;
-
-  font-size:4rem;
-
-  color:var(--rose-dark);
-
-  background:rgba(255,255,255,.4);
-}
-
-.floating-note{
-  position:absolute;
-
-  bottom:50px;
-  right:0;
-
-  background:white;
-
-  padding:18px 22px;
-
-  border-radius:17px;
-
-  box-shadow:var(--shadow);
-
-  font-family:'Cormorant Garamond',serif;
-
-  color:var(--rose-dark);
-
-  font-size:1.1rem;
-}
-
-
-/* =========================================================
-   SECTION COMMON
-========================================================= */
-
-section{
-  padding:100px 0;
-}
-
-.section-heading{
-  text-align:center;
-
-  max-width:680px;
-
-  margin:0 auto 55px;
-}
-
-.eyebrow{
-  color:var(--rose);
-
-  font-size:.7rem;
-
-  letter-spacing:.2em;
-
-  text-transform:uppercase;
-
-  margin-bottom:10px;
-}
-
-.section-heading h2{
-  font-family:'Cormorant Garamond',serif;
-
-  color:var(--rose-dark);
-
-  font-size:clamp(2.3rem,4vw,3.4rem);
-
-  line-height:1;
-
-  font-weight:600;
-}
-
-.section-heading p{
-  margin-top:17px;
-
-  color:var(--muted);
-
-  line-height:1.7;
-}
-
-
-/* =========================================================
-   CATEGORIES
-========================================================= */
-
-.categories{
-  background:#fff;
-}
-
-.category-grid{
-  display:grid;
-
-  grid-template-columns:repeat(2,1fr);
-
-  gap:25px;
-}
-
-.category-card{
-  min-height:370px;
-
-  border-radius:var(--radius);
-
-  position:relative;
-
-  overflow:hidden;
-
-  background:var(--cream-2);
-
-  border:1px solid var(--border);
-
-  display:flex;
-  align-items:flex-end;
-
-  transition:.35s;
-}
-
-.category-card:hover{
-  transform:translateY(-7px);
-  box-shadow:var(--shadow);
-}
-
-.category-image{
-  position:absolute;
-  inset:0;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  color:var(--rose-light);
-
-  font-size:5rem;
-}
-
-.category-content{
-  position:relative;
-  z-index:2;
-
-  width:100%;
-
-  padding:30px;
-
-  background:linear-gradient(
-    transparent,
-    rgba(43,35,32,.82)
-  );
-
-  color:white;
-
-  padding-top:100px;
-}
-
-.category-content h3{
-  font-family:'Cormorant Garamond',serif;
-
-  font-size:2.2rem;
-
-  font-weight:600;
-}
-
-.category-content p{
-  margin-top:5px;
-
-  opacity:.85;
-
-  font-size:.9rem;
-}
-
-.category-link{
-  display:inline-block;
-
-  margin-top:15px;
-
-  font-size:.72rem;
-
-  letter-spacing:.12em;
-
-  text-transform:uppercase;
-
-  border-bottom:1px solid rgba(255,255,255,.6);
-
-  padding-bottom:4px;
-}
-
-
-/* =========================================================
-   PRODUCTS
-========================================================= */
-
-.products{
-  background:var(--cream);
-}
-
-.product-grid{
-  display:grid;
-
-  grid-template-columns:repeat(3,1fr);
-
-  gap:22px;
-}
-
-.product-card{
-  background:white;
-
-  border:1px solid var(--border);
-
-  border-radius:18px;
-
-  overflow:hidden;
-
-  transition:.3s;
-}
-
-.product-card:hover{
-  transform:translateY(-5px);
-
-  box-shadow:var(--shadow);
-}
-
-.product-image{
-  aspect-ratio:1/1;
-
-  background:var(--cream-2);
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  color:var(--rose-light);
-
-  font-size:3rem;
-}
-
-.product-info{
-  padding:22px;
-}
-
-.product-info h3{
-  font-family:'Cormorant Garamond',serif;
-
-  font-size:1.45rem;
-
-  color:var(--rose-dark);
-}
-
-.product-info p{
-  color:var(--muted);
-
-  font-size:.84rem;
-
-  line-height:1.6;
-
-  margin-top:6px;
-}
-
-.product-btn{
-  display:inline-block;
-
-  margin-top:15px;
-
-  color:var(--rose);
-
-  font-size:.72rem;
-
-  letter-spacing:.1em;
-
-  text-transform:uppercase;
-}
-
-
-/* =========================================================
-   ABOUT
-========================================================= */
-
-.about{
-  background:var(--rose-dark);
-
-  color:white;
-}
-
-.about-grid{
-  display:grid;
-
-  grid-template-columns:.8fr 1.2fr;
-
-  gap:80px;
-
-  align-items:center;
-}
-
-.about-badge{
-  width:210px;
-  height:210px;
-
-  border:1px solid rgba(255,255,255,.5);
-
-  border-radius:50%;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  margin:auto;
-
-  font-family:'Cormorant Garamond',serif;
-
-  font-size:4rem;
-}
-
-.about .eyebrow{
-  color:var(--rose-light);
-}
-
-.about h2{
-  font-family:'Cormorant Garamond',serif;
-
-  font-size:clamp(2.5rem,5vw,4rem);
-
-  line-height:1;
-
-  font-weight:600;
-}
-
-.about p{
-  margin-top:22px;
-
-  max-width:620px;
-
-  line-height:1.8;
-
-  color:rgba(255,255,255,.78);
-}
-
-.about-signature{
-  margin-top:25px;
-
-  font-family:'Marck Script',cursive;
-
-  font-size:2rem;
-
-  color:var(--rose-light);
-}
-
-
-/* =========================================================
-   WHY US
-========================================================= */
-
-.why{
-  background:white;
-}
-
-.why-grid{
-  display:grid;
-
-  grid-template-columns:repeat(4,1fr);
-
-  gap:20px;
-}
-
-.why-card{
-  padding:30px 22px;
-
-  border:1px solid var(--border);
-
-  border-radius:18px;
-
-  text-align:center;
-
-  background:var(--cream);
-}
-
-.why-icon{
-  width:54px;
-  height:54px;
-
-  margin:0 auto 16px;
-
-  border-radius:50%;
-
-  background:var(--cream-2);
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-size:1.4rem;
-}
-
-.why-card h3{
-  font-family:'Cormorant Garamond',serif;
-
-  font-size:1.3rem;
-
-  color:var(--rose-dark);
-}
-
-.why-card p{
-  color:var(--muted);
-
-  font-size:.82rem;
-
-  line-height:1.55;
-
-  margin-top:8px;
-}
-
-
-/* =========================================================
-   FAQ
-========================================================= */
-
-.faq{
-  background:var(--cream);
-}
-
-.faq-container{
-  max-width:800px;
-
-  margin:auto;
-}
-
-.faq-item{
-  border-bottom:1px solid var(--border);
-}
-
-.faq-question{
-  width:100%;
-
-  background:none;
-
-  border:none;
-
-  padding:22px 0;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-
-  gap:20px;
-
-  text-align:left;
-
-  cursor:pointer;
-
-  color:var(--text);
-
-  font-family:'Cormorant Garamond',serif;
-
-  font-size:1.25rem;
-
-  font-weight:600;
-}
-
-.faq-plus{
-  color:var(--rose);
-
-  font-size:1.4rem;
-
-  transition:.25s;
-}
-
-.faq-answer{
-  max-height:0;
-
-  overflow:hidden;
-
-  transition:max-height .35s ease;
-
-  color:var(--muted);
-
-  line-height:1.7;
-
-  font-size:.9rem;
-}
-
-.faq-answer p{
-  padding:0 0 22px;
-}
-
-.faq-item.active .faq-answer{
-  max-height:200px;
-}
-
-.faq-item.active .faq-plus{
-  transform:rotate(45deg);
-}
-
-
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.contact{
-  background:white;
-}
-
-.contact-grid{
-  display:grid;
-
-  grid-template-columns:.9fr 1.1fr;
-
-  gap:50px;
-
-  align-items:start;
-}
-
-.contact-info h2{
-  font-family:'Cormorant Garamond',serif;
-
-  color:var(--rose-dark);
-
-  font-size:3rem;
-
-  line-height:1;
-}
-
-.contact-info > p{
-  color:var(--muted);
-
-  line-height:1.7;
-
-  margin-top:17px;
-
-  max-width:450px;
-}
-
-.contact-list{
-  margin-top:30px;
-
-  display:flex;
-
-  flex-direction:column;
-
-  gap:13px;
-}
-
-.contact-item{
-  display:flex;
-
-  align-items:center;
-
-  gap:15px;
-
-  padding:15px;
-
-  background:var(--cream);
-
-  border-radius:14px;
-}
-
-.contact-icon{
-  width:42px;
-  height:42px;
-
-  border-radius:50%;
-
-  background:var(--rose);
-
-  color:white;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.contact-item span{
-  display:block;
-
-  font-size:.68rem;
-
-  text-transform:uppercase;
-
-  letter-spacing:.1em;
-
-  color:var(--muted);
-}
-
-.contact-item strong{
-  display:block;
-
-  margin-top:2px;
-
-  color:var(--rose-dark);
-
-  font-family:'Cormorant Garamond',serif;
-
-  font-size:1.15rem;
-}
-
-
-/* CONTACT CARD */
-
-.contact-card{
-  background:var(--cream);
-
-  border:1px solid var(--border);
-
-  border-radius:22px;
-
-  padding:32px;
-}
-
-.contact-card h3{
-  font-family:'Cormorant Garamond',serif;
-
-  color:var(--rose-dark);
-
-  font-size:1.7rem;
-}
-
-.contact-card p{
-  color:var(--muted);
-
-  font-size:.85rem;
-
-  margin-top:5px;
-
-  margin-bottom:22px;
-}
-
-.field{
-  margin-bottom:15px;
-}
-
-.field label{
-  display:block;
-
-  font-size:.68rem;
-
-  text-transform:uppercase;
-
-  letter-spacing:.1em;
-
-  color:var(--muted);
-
-  margin-bottom:6px;
-}
-
-.field input,
-.field textarea{
-  width:100%;
-
-  border:1px solid var(--border);
-
-  background:white;
-
-  border-radius:10px;
-
-  padding:13px;
-
-  font-family:'Jost',sans-serif;
-
-  font-size:.9rem;
-
-  outline:none;
-}
-
-.field input:focus,
-.field textarea:focus{
-  border-color:var(--rose);
-}
-
-.field textarea{
-  min-height:100px;
-
-  resize:vertical;
-}
-
-.form-button{
-  width:100%;
-
-  border:none;
-
-  background:var(--rose);
-
-  color:white;
-
-  padding:14px;
-
-  border-radius:10px;
-
-  cursor:pointer;
-
-  text-transform:uppercase;
-
-  letter-spacing:.08em;
-
-  font-size:.75rem;
-}
-
-.form-button:hover{
-  background:var(--rose-dark);
-}
-
-
-/* =========================================================
-   LOCATION
-========================================================= */
-
-.location{
-  background:var(--cream-2);
-}
-
-.location-card{
-  background:white;
-
-  border-radius:24px;
-
-  overflow:hidden;
-
-  border:1px solid var(--border);
-
-  display:grid;
-
-  grid-template-columns:1fr 1fr;
-
-  min-height:300px;
-}
-
-.location-placeholder{
-  background:#ead6ce;
-
-  display:flex;
-
-  align-items:center;
-  justify-content:center;
-
-  font-size:3rem;
-}
-
-.location-content{
-  padding:45px;
-}
-
-.location-content h2{
-  font-family:'Cormorant Garamond',serif;
-
-  color:var(--rose-dark);
-
-  font-size:2.5rem;
-}
-
-.location-content p{
-  color:var(--muted);
-
-  line-height:1.7;
-
-  margin-top:12px;
-}
-
-.map-btn{
-  display:inline-block;
-
-  margin-top:22px;
-
-  background:var(--rose);
-
-  color:white;
-
-  padding:12px 22px;
-
-  border-radius:100px;
-
-  font-size:.75rem;
-
-  text-transform:uppercase;
-
-  letter-spacing:.08em;
-}
-
-
-/* =========================================================
-   CTA
-========================================================= */
-
-.final-cta{
-  background:var(--rose-dark);
-
-  color:white;
-
-  text-align:center;
-
-  padding:100px 20px;
-}
-
-.final-cta h2{
-  font-family:'Cormorant Garamond',serif;
-
-  font-size:clamp(2.7rem,5vw,4.5rem);
-
-  line-height:1;
-}
-
-.final-cta p{
-  margin:17px auto 30px;
-
-  max-width:600px;
-
-  color:rgba(255,255,255,.75);
-
-  line-height:1.7;
-}
-
-.final-cta .btn-outline{
-  border-color:rgba(255,255,255,.6);
-
-  color:white;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer{
-  background:#24191A;
-
-  color:rgba(255,255,255,.65);
-
-  padding:40px 0;
-
-  text-align:center;
-
-  font-size:.78rem;
-}
-
-.footer-logo{
-  font-family:'Cormorant Garamond',serif;
-
-  color:white;
-
-  font-size:1.5rem;
-
-  margin-bottom:8px;
-}
-
-.footer-links{
-  margin-top:15px;
-
-  display:flex;
-
-  justify-content:center;
-
-  flex-wrap:wrap;
-
-  gap:20px;
-}
-
-.footer-links a:hover{
-  color:white;
-}
-
-.copyright{
-  margin-top:25px;
-
-  opacity:.6;
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media(max-width:900px){
-
-  .hero-grid{
-    grid-template-columns:1fr;
-
-    text-align:center;
-
-    gap:40px;
-  }
-
-  .hero-description{
-    margin-left:auto;
-    margin-right:auto;
-  }
-
-  .hero-buttons{
-    justify-content:center;
-  }
-
-  .hero-visual{
-    min-height:430px;
-  }
-
-  .about-grid{
-    grid-template-columns:1fr;
-
-    text-align:center;
-
-    gap:45px;
-  }
-
-  .about p{
-    margin-left:auto;
-    margin-right:auto;
-  }
-
-  .why-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-}
-
-
-@media(max-width:700px){
-
-  .container{
-    width:min(100% - 30px,1160px);
-  }
-
-  section{
-    padding:75px 0;
-  }
-
-  .nav{
-    min-height:68px;
-  }
-
-  .nav-links{
-    display:none;
-  }
-
-  .nav-button{
-    padding:9px 14px;
-    font-size:.68rem;
-  }
-
-  .hero{
-    padding-top:125px;
-  }
-
-  .hero h1{
-    font-size:3.5rem;
-  }
-
-  .hero-card{
-    width:300px;
-  }
-
-  .category-grid{
-    grid-template-columns:1fr;
-  }
-
-  .product-grid{
-    grid-template-columns:1fr;
-  }
-
-  .why-grid{
-    grid-template-columns:1fr;
-  }
-
-  .location-card{
-    grid-template-columns:1fr;
-  }
-
-  .location-placeholder{
-    min-height:220px;
-  }
-
-  .location-content{
-    padding:30px;
-  }
-}
-
-
-@media(max-width:480px){
-
-  .logo{
-    font-size:1.25rem;
-  }
-
-  .logo-circle{
-    width:37px;
-    height:37px;
-  }
-
-  .nav-button{
-    display:none;
-  }
-
-  .hero h1{
-    font-size:3rem;
-  }
-
-  .hero-script{
-    font-size:1.9rem;
-  }
-
-  .hero-description{
-    font-size:.92rem;
-  }
-
-  .hero-buttons{
-    flex-direction:column;
-  }
-
-  .btn{
-    width:100%;
-  }
-
-  .hero-visual{
-    min-height:350px;
-  }
-
-  .hero-card{
-    width:260px;
-  }
-
-  .floating-note{
-    right:5px;
-    bottom:20px;
-  }
-}
-
+/* ===== DESIGN TOKENS ===== */
+:root{--cream:#FBF6EE;--ivory:#FFFCF7;--blush:#F3D9D4;--blush-soft:#F9EAE6;--rose:#A85C69;--rose-deep:#7E3F4B;--gold:#B8924A;--ink:#3A2A2C;--muted:#7A6A6B;
+--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;
+--shadow:0 10px 30px rgba(126,63,75,.10);--r:22px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font:400 1rem/1.65 var(--sans);color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;color:var(--rose-deep)}
+h1{font-size:clamp(2.6rem,9vw,4.8rem)}h2{font-size:clamp(2rem,6vw,3rem)}h3{font-size:1.45rem}
+p{max-width:60ch}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1120px,92%);margin-inline:auto}
+section{padding:4.5rem 0}
+.lead{color:var(--muted);margin-top:.8rem}
+.sec-head{margin-bottom:2rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.85rem 1.7rem;border-radius:999px;border:1.5px solid var(--rose);font:500 .95rem var(--sans);text-decoration:none;cursor:pointer;background:var(--rose);color:#fff;transition:transform .2s,background .2s,box-shadow .2s}
+.btn:hover{background:var(--rose-deep);transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn.ghost{background:transparent;color:var(--rose-deep)}
+.btn.ghost:hover{background:var(--blush-soft)}
+.btn.wa{background:#1f7a4d;border-color:#1f7a4d}.btn.wa:hover{background:#17603b}
+.btn[disabled]{opacity:.6;cursor:not-allowed;transform:none;box-shadow:none}
+
+/* ===== HEADER ===== */
+header{position:sticky;top:0;z-index:20;background:rgba(251,246,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(184,146,74,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:600 1.6rem var(--serif);color:var(--rose-deep);text-decoration:none;letter-spacing:.02em}
+.logo span{color:var(--gold)}
+nav ul{display:none;list-style:none;padding:0;gap:1.6rem}
+nav a{text-decoration:none;font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--rose)}
+.menu-btn{background:none;border:1.5px solid var(--rose);border-radius:12px;padding:.45rem .8rem;font:500 .9rem var(--sans);color:var(--rose-deep)}
+nav.open ul{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:68px;background:var(--ivory);padding:1.2rem 8%;gap:1rem;box-shadow:var(--shadow)}
+@media(min-width:820px){nav ul{display:flex}.menu-btn{display:none}}
+
+/* ===== HERO: arched photo frame is the signature element ===== */
+.hero{padding:2.5rem 0 4rem;background:radial-gradient(circle at 85% 20%,var(--blush) 0,transparent 55%),var(--cream)}
+.hero .wrap{display:grid;gap:2.5rem;align-items:center}
+.hero p{margin:1.2rem 0 1.8rem;font-size:1.1rem;color:var(--muted)}
+.tagline{font:italic 500 1.25rem var(--serif);color:var(--gold);margin-bottom:.8rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:.8rem}
+.arch{aspect-ratio:4/5;max-width:420px;width:100%;margin-inline:auto;border-radius:999px 999px 28px 28px;border:2px solid var(--gold);padding:10px;background:var(--ivory);box-shadow:var(--shadow)}
+.arch>div{height:100%;border-radius:999px 999px 20px 20px;overflow:hidden;background:var(--blush)}
+.arch img{width:100%;height:100%;object-fit:cover}
+@media(min-width:820px){.hero .wrap{grid-template-columns:1.15fr .85fr}}
+
+/* ===== CATEGORIES ===== */
+.cats{display:grid;gap:1.4rem}
+.cat{position:relative;display:flex;flex-direction:column;border-radius:var(--r);overflow:hidden;background:var(--ivory);box-shadow:var(--shadow);border:1px solid rgba(184,146,74,.3)}
+.cat img{aspect-ratio:16/10;width:100%;object-fit:cover}
+.cat div{padding:1.4rem 1.5rem 1.7rem;display:grid;gap:.7rem;justify-items:start}
+@media(min-width:700px){.cats{grid-template-columns:1fr 1fr}}
+
+/* ===== COLLECTION ===== */
+.collection{background:var(--ivory);border-block:1px solid rgba(184,146,74,.25)}
+.tabs{display:inline-flex;background:var(--blush-soft);border-radius:999px;padding:5px;margin-bottom:1.6rem}
+.tabs button{border:0;background:none;padding:.65rem 1.6rem;border-radius:999px;font:500 .95rem var(--sans);color:var(--rose-deep);cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--rose);color:#fff}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.chip{border:1.5px solid var(--blush);background:var(--cream);padding:.35rem 1rem;border-radius:999px;font:400 .88rem var(--sans);cursor:pointer;color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--blush);border-color:var(--rose)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.4rem}
+.card{background:var(--cream);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;border:1px solid rgba(184,146,74,.22);transition:transform .25s}
+.card:hover{transform:translateY(-4px)}
+.card .ph{position:relative;aspect-ratio:1/1;background:var(--blush-soft);cursor:pointer;border:0;padding:0;display:block;width:100%}
+.card .ph img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;top:12px;left:12px;background:var(--gold);color:#fff;font:500 .78rem var(--sans);padding:.2rem .75rem;border-radius:999px}
+.card .body{padding:1.1rem 1.2rem 1.3rem;display:flex;flex-direction:column;gap:.45rem;flex:1}
+.card h3 button{all:unset;cursor:pointer}
+.card h3 button:focus-visible{outline:3px solid var(--gold)}
+.price{font-weight:500;color:var(--rose)}
+.card p{font-size:.93rem;color:var(--muted);flex:1}
+.card .btn{margin-top:.6rem;padding:.7rem 1rem}
+.card.custom{background:var(--blush-soft);border:2px dashed var(--gold);justify-content:center;text-align:center;padding:2rem 1.4rem;gap:.8rem;align-items:center}
+
+/* ===== CUSTOM ORDERS ===== */
+.custom-sec{background:linear-gradient(135deg,var(--blush) 0,var(--blush-soft) 100%)}
+.custom-sec .wrap{display:grid;gap:2rem}
+.custom-sec ul{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.custom-sec li{background:var(--ivory);padding:1rem 1.1rem;border-radius:16px;box-shadow:var(--shadow);font-weight:500;border-left:3px solid var(--gold)}
+@media(min-width:820px){.custom-sec .wrap{grid-template-columns:1fr 1fr;align-items:center}}
+
+/* ===== FAQ ===== */
+.faq{max-width:760px}
+details{background:var(--ivory);border-radius:16px;margin-bottom:.8rem;border:1px solid rgba(184,146,74,.3);padding:0 1.3rem}
+summary{cursor:pointer;padding:1.1rem 0;font:600 1.2rem var(--serif);color:var(--rose-deep);list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:1.5rem;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{padding-bottom:1.2rem;color:var(--muted)}
+
+/* ===== CONTACT / LOCATION ===== */
+.contact-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.ct{background:var(--ivory);border-radius:var(--r);padding:1.3rem;box-shadow:var(--shadow);border:1px solid rgba(184,146,74,.25)}
+.ct b{display:block;font:600 1.15rem var(--serif);color:var(--rose-deep)}
+.ct a,.ct span{color:var(--muted);text-decoration:none;word-break:break-word}
+.ct a:hover{color:var(--rose)}
+.map{margin-top:2rem;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(184,146,74,.3)}
+.map iframe{width:100%;height:320px;border:0;display:block}
+.loc{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;margin-top:1rem}
+
+/* ===== FOOTER ===== */
+footer{background:var(--rose-deep);color:#f6e8e4;padding:3rem 0 5.5rem}
+footer .wrap{display:grid;gap:2rem}
+footer .logo{color:#fff}
+footer ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.6rem 1.4rem}
+footer a{text-decoration:none}footer a:hover{text-decoration:underline}
+footer small{opacity:.8}
+@media(min-width:820px){footer .wrap{grid-template-columns:1.2fr 1fr}footer{padding-bottom:3rem}}
+
+/* Floating WhatsApp */
+.fab{position:fixed;right:16px;bottom:16px;z-index:15;background:#1f7a4d;color:#fff;border-radius:999px;padding:.8rem 1.3rem;font-weight:500;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+
+/* ===== MODAL ===== */
+dialog{border:0;border-radius:26px;padding:0;width:min(860px,94vw);max-height:92vh;background:var(--cream);color:var(--ink);box-shadow:0 30px 80px rgba(58,42,44,.35);overflow:auto}
+dialog::backdrop{background:rgba(58,42,44,.55)}
+dialog[open]{animation:pop .28s ease}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+.pd{display:grid}
+.pd .img{aspect-ratio:1/1;background:var(--blush-soft)}
+.pd .img img{width:100%;height:100%;object-fit:cover}
+.pd .info{padding:1.6rem;display:grid;gap:.9rem;align-content:start}
+.note{background:var(--blush-soft);border-radius:14px;padding:.8rem 1rem;font-size:.92rem;color:var(--muted)}
+.qty{display:inline-flex;align-items:center;border:1.5px solid var(--blush);border-radius:999px;width:max-content}
+.qty button{width:42px;height:42px;border:0;background:none;font-size:1.3rem;color:var(--rose-deep);cursor:pointer}
+.qty output{min-width:2.2rem;text-align:center;font-weight:500}
+@media(min-width:760px){.pd{grid-template-columns:1fr 1fr}.pd .img{aspect-ratio:auto;min-height:100%}}
+
+/* ===== MOTION: one soft entrance on the hero; everything else responds to taps ===== */
+.hero .wrap>*{animation:rise .9s ease both}.hero .wrap>*:nth-child(2){animation-delay:.15s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
-
-
 <body>
 
-
-<!-- =======================================================
-     NAVBAR
-======================================================= -->
-
 <header>
-
-<div class="container nav">
-
-<a href="#home" class="logo">
-  <span class="logo-circle">
-    KZ
-  </span>
-
-  KZ Creative
-</a>
-
-<nav class="nav-links">
-
-<a href="#home">Home</a>
-<a href="#categories">Categories</a>
-<a href="#about">About</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
-<a
-class="nav-button"
-href="https://wa.me/917986041515"
-target="_blank">
-Order / Enquire
-</a>
-
-</div>
-
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="KZ Creative home">KZ <span>Creative</span></a>
+    <nav id="nav" aria-label="Main">
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navList">Menu</button>
+      <ul id="navList">
+        <li><a href="#collection" data-tab="candles">Candles</a></li>
+        <li><a href="#collection" data-tab="pops">Pops</a></li>
+        <li><a href="#custom">Custom orders</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
+<main id="top">
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap">
+      <div>
+        <p class="tagline">Handmade with love, made just for you</p>
+        <h1 id="h1">Little Things, Made Beautifully.</h1>
+        <p>Handcrafted candles, pops and customised gifts made specially for your moments.</p>
+        <div class="cta-row">
+          <a class="btn" href="#categories">Explore Collection</a>
+          <a class="btn ghost" href="#contact">Contact Us</a>
+        </div>
+      </div>
+      <!-- Replace HERO_IMAGE in the config below with a product photo -->
+      <div class="arch"><div><img id="heroImg" alt="KZ Creative handmade candle and pops arranged together" width="420" height="525" fetchpriority="high"></div></div>
+    </div>
+  </section>
 
+  <section id="categories" aria-labelledby="cat-h">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="cat-h">Choose your collection</h2><p class="lead">Two things we love making most. Each one can be personalised for you.</p></div>
+      <div class="cats">
+        <article class="cat"><img data-ph="Candles" alt="Handmade candles by KZ Creative" width="640" height="400" loading="lazy">
+          <div><h3>Candles</h3><p>Hand-poured, softly scented candles in shapes and colours that suit your space or your gifting.</p><a class="btn" href="#collection" data-tab="candles">View Candles</a></div></article>
+        <article class="cat"><img data-ph="Pops" alt="Handmade cake pops by KZ Creative" width="640" height="400" loading="lazy">
+          <div><h3>Pops</h3><p>Cake pops decorated by hand, ready for birthdays, weddings and every small celebration.</p><a class="btn" href="#collection" data-tab="pops">View Pops</a></div></article>
+      </div>
+    </div>
+  </section>
 
-<!-- =======================================================
-     HERO
-======================================================= -->
+  <section id="collection" class="collection" aria-labelledby="col-h">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="col-h">The collection</h2><p class="lead" id="colDesc"></p></div>
+      <div class="tabs" role="tablist" aria-label="Collections">
+        <button role="tab" id="tab-candles" aria-selected="true" data-tab="candles">Candles</button>
+        <button role="tab" id="tab-pops" aria-selected="false" data-tab="pops">Pops</button>
+      </div>
+      <div class="filters" id="filters" aria-label="Filter products"></div>
+      <div class="grid" id="grid" role="tabpanel" aria-live="polite"></div>
+    </div>
+  </section>
 
-<section class="hero" id="home">
+  <section id="custom" class="custom-sec" aria-labelledby="cu-h">
+    <div class="wrap">
+      <div>
+        <h2 id="cu-h">Made Especially For You</h2>
+        <p class="lead">Tell us the colours, scent, theme or message you have in mind and we will make it. Every custom order starts with a simple chat.</p>
+        <p style="margin-top:1.4rem"><a class="btn wa" id="customBtn" href="#" target="_blank" rel="noopener">Request a Custom Order</a></p>
+      </div>
+      <ul><li>Custom candles</li><li>Custom pops</li><li>Return gifts</li><li>Gift sets</li><li style="grid-column:1/-1">Event, wedding and birthday orders</li></ul>
+    </div>
+  </section>
 
-<div class="container hero-grid">
+  <section id="faq" aria-labelledby="fq-h">
+    <div class="wrap faq">
+      <div class="sec-head"><h2 id="fq-h">Questions, answered</h2></div>
+      <details><summary>Do you accept customised orders?</summary><p>Yes. Candles, pops, gift sets and return gifts can all be customised. Message us your idea and we will confirm what is possible.</p></details>
+      <details><summary>How can I place an order?</summary><p>Tap Enquire Now on any product or Request a Custom Order. WhatsApp opens with your message ready. We confirm details and payment there.</p></details>
+      <details><summary>How much advance notice is required?</summary><p>Please enquire as early as you can. Custom and event orders need more time than ready designs. We confirm the date with you when you enquire.</p></details>
+      <details><summary>Do you make bulk or event orders?</summary><p>Yes. Weddings, birthdays and corporate events are welcome. Share the quantity and the date.</p></details>
+      <details><summary>Can I choose colours and designs?</summary><p>Yes. You can choose colours, scents, wrapping and messages. Send a reference photo if you have one.</p></details>
+      <details><summary>Do you provide return gifts?</summary><p>Yes. We make return gifts in small or large quantities, packed to match your theme.</p></details>
+      <details><summary>How can I contact KZ Creative?</summary><p>Use the WhatsApp button on this page, or find our phone, email and Instagram in the Contact section below.</p></details>
+    </div>
+  </section>
 
-<div>
+  <section id="contact" aria-labelledby="ct-h" style="padding-top:1rem">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="ct-h">Talk to us</h2><p class="lead">The quickest way to reach us is WhatsApp.</p></div>
+      <div class="contact-grid" id="contactGrid"></div>
+      <p style="margin-top:1.6rem"><a class="btn wa" data-wa href="#" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+    </div>
+  </section>
 
-<div class="hero-label">
-  ♥ Handmade With Love
-</div>
+  <section id="location" aria-labelledby="lo-h" style="padding-top:1rem">
+    <div class="wrap">
+      <h2 id="lo-h">Find us</h2>
+      <p class="lead" id="addr"></p>
+      <div class="map"><iframe id="mapFrame" title="KZ Creative location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <div class="loc"><span class="lead" style="margin:0">Visits are by appointment, so message us first.</span><a class="btn ghost" id="dirBtn" href="#" target="_blank" rel="noopener">Get Directions</a></div>
+    </div>
+  </section>
+</main>
 
-<h1>
+<footer>
+  <div class="wrap">
+    <div><a class="logo" href="#top">KZ Creative</a><p style="margin-top:.6rem">Handmade with love, made just for you. Candles, pops and customised gifts.</p></div>
+    <nav aria-label="Footer"><ul>
+      <li><a href="#collection" data-tab="candles">Candles</a></li><li><a href="#collection" data-tab="pops">Pops</a></li>
+      <li><a href="#custom">Custom Orders</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li>
+      <li><a id="fIg" href="#" target="_blank" rel="noopener">Instagram</a></li><li><a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul></nav>
+    <small id="copy"></small>
+  </div>
+</footer>
+<a class="fab" data-wa href="#" target="_blank" rel="noopener" aria-label="Chat with KZ Creative on WhatsApp">WhatsApp</a>
 
-KZ Creative
+<dialog id="dlg" aria-labelledby="dName">
+  <div class="pd">
+    <div class="img"><img id="dImg" alt="" width="600" height="600"></div>
+    <div class="info">
+      <h2 id="dName" style="font-size:2rem"></h2>
+      <div class="price" id="dPrice"></div>
+      <p id="dDesc"></p>
+      <div class="note" id="dNote"></div>
+      <div class="qty" role="group" aria-label="Quantity"><button type="button" id="qMinus" aria-label="Decrease quantity">&minus;</button><output id="qVal" aria-live="polite">1</output><button type="button" id="qPlus" aria-label="Increase quantity">+</button></div>
+      <a class="btn wa" id="dWa" href="#" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+      <button class="btn ghost" type="button" id="dBack">Back to Collection</button>
+    </div>
+  </div>
+</dialog>
 
-<span class="hero-script">
-Crafting uniqueness
-</span>
+<script>
+/* =====================================================================
+   1. SITE SETTINGS: replace every value marked "REPLACE" before launch
+   ===================================================================== */
+const CONFIG = {
+  brand: "KZ Creative",
+  whatsapp: "910000000000",                 // REPLACE: country code + number, digits only (e.g. 919876543210)
+  instagram: "https://www.instagram.com/",  // REPLACE with your profile link
+  instagramHandle: "@kzcreative",           // REPLACE
+  phone: "+91 00000 00000",                 // REPLACE
+  email: "hello@example.com",               // REPLACE
+  address: "Add your studio address, City, State, PIN",  // REPLACE
+  mapQuery: "India",                        // REPLACE with your address or area for the map
+  hours: "Mon to Sat, 10 am to 7 pm",       // REPLACE
+  heroImage: "",                            // REPLACE: e.g. "./images/hero.jpg" (empty shows a soft placeholder)
+  enquiryIntro: "Hi KZ Creative! I'd like to enquire about",
+  customMessage: "Hi KZ Creative! I'd like to request a custom order. Here are my ideas:"
+};
 
-</h1>
+/* =====================================================================
+   2. PRODUCT DATA: edit ONLY this section to add / remove / change items.
+   To add a product: copy one object, paste it, give it a new id.
+   Fields: id, name, image (path or URL, "" = placeholder), price (text),
+   description, category (used for the filter chips), badge ("New",
+   "Popular", "Custom" or ""), available (true/false), message (optional
+   custom WhatsApp text), details (optional note shown in the pop-up).
+   ===================================================================== */
+const candles = [
+  { id: 1, name: "Rose Petal Candle", image: "./images/rose-candle.jpg", price: "Price on enquiry",
+    description: "A hand-poured candle with dried rose petals and a soft floral scent.",
+    category: "Floral", badge: "Popular", available: true, message: "", details: "Colour and scent can be changed on request." },
+  { id: 2, name: "Vanilla Jar Candle", image: "", price: "Price on enquiry",
+    description: "A warm vanilla candle in a reusable glass jar, ready to gift.",
+    category: "Jar", badge: "", available: true, message: "", details: "Label and jar size can be personalised." },
+  { id: 3, name: "Pillar Candle Set", image: "", price: "Price on enquiry",
+    description: "A set of three pillar candles in blush, ivory and rose tones.",
+    category: "Sets", badge: "New", available: true, message: "", details: "Great for tables, festivals and gifting." },
+  { id: 4, name: "Seasonal Special", image: "", price: "Price on enquiry",
+    description: "A limited-run candle we pour a few times a year.",
+    category: "Sets", badge: "", available: false, message: "", details: "" }
+];
 
-<p class="hero-description">
+const pops = [
+  { id: 1, name: "Classic Chocolate Pops", image: "", price: "Price on enquiry",
+    description: "Chocolate cake pops dipped and decorated by hand.",
+    category: "Classic", badge: "Popular", available: true, message: "", details: "Sold in boxes. Tell us the quantity you need." },
+  { id: 2, name: "Blush Birthday Pops", image: "", price: "Price on enquiry",
+    description: "Pastel pops with sprinkles, made for birthday tables and gift boxes.",
+    category: "Celebration", badge: "New", available: true, message: "", details: "Colours can be matched to your party theme." },
+  { id: 3, name: "Wedding Favour Pops", image: "", price: "Price on enquiry",
+    description: "Elegant ivory and gold pops, packed individually as guest favours.",
+    category: "Celebration", badge: "Custom", available: true, message: "", details: "Bulk orders welcome. Please enquire early." }
+];
 
-Beautiful handmade creations made specially for
-your celebrations, gifting moments and special occasions.
+/* Short intro text for each collection (editable) */
+const COLLECTIONS = {
+  candles: { items: candles, label: "Candle", desc: "Hand-poured candles in soft scents and colours. Pick a ready design or ask us to make one just for you.", customName: "Custom Candle" },
+  pops:    { items: pops,    label: "Pop",    desc: "Cake pops made fresh by hand and decorated to match your occasion.", customName: "Custom Pops Order" }
+};
 
-From candles and pops to customised gifts —
-every piece is created with care.
+/* =====================================================================
+   3. UI LOGIC: no need to edit below this line
+   ===================================================================== */
+const $ = (s, el = document) => el.querySelector(s);
+const esc = t => String(t ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const waLink = msg => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
 
-</p>
+/* Inline SVG placeholder so there are never broken images */
+function placeholder(label) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F9EAE6"/><stop offset="1" stop-color="#F3D9D4"/></linearGradient></defs><rect width="600" height="600" fill="url(#g)"/><circle cx="300" cy="300" r="120" fill="none" stroke="#B8924A" stroke-width="3"/><text x="300" y="312" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#7E3F4B">${esc(label).slice(0, 18)}</text></svg>`;
+  return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+}
+function setImg(img, src, label) {
+  img.src = src || placeholder(label);
+  img.onerror = () => { img.onerror = null; img.src = placeholder(label); };
+}
 
-<div class="hero-buttons">
+let current = "candles", activeFilter = "All", openItem = null, qty = 1;
 
-<a
-href="#categories"
-class="btn btn-primary">
+function renderFilters() {
+  const cats = ["All", ...new Set(COLLECTIONS[current].items.map(p => p.category).filter(Boolean))];
+  $("#filters").innerHTML = cats.length > 2 ? cats.map(c => `<button class="chip" aria-pressed="${c === activeFilter}" data-f="${esc(c)}">${esc(c)}</button>`).join("") : "";
+}
 
-Explore Collections →
+function renderGrid() {
+  const col = COLLECTIONS[current];
+  $("#colDesc").textContent = col.desc;
+  const list = col.items.filter(p => activeFilter === "All" || p.category === activeFilter);
+  const cards = list.map(p => `
+    <article class="card">
+      <button class="ph" data-open="${p.id}" aria-label="View ${esc(p.name)}">
+        <img data-src="${esc(p.image)}" data-label="${esc(p.name)}" alt="${esc(p.name)}" width="400" height="400" loading="lazy">
+        ${p.badge ? `<span class="badge">${esc(p.badge)}</span>` : ""}
+      </button>
+      <div class="body">
+        <h3><button data-open="${p.id}">${esc(p.name)}</button></h3>
+        <div class="price">${esc(p.price)}</div>
+        <p>${esc(p.description)}</p>
+        ${p.available
+          ? `<a class="btn" target="_blank" rel="noopener" href="${waLink(p.message || `${CONFIG.enquiryIntro} ${p.name}.`)}">Enquire Now</a>`
+          : `<button class="btn" disabled>Currently Unavailable</button>`}
+      </div>
+    </article>`).join("");
+  const custom = `
+    <article class="card custom">
+      <h3>${current === "candles" ? "Add Your Own Design" : "Custom Order"}</h3>
+      <p>${current === "candles" ? "Share your colours, scent and shape. We will make a candle that is yours alone." : "Tell us the flavour, colours and quantity. We will design the pops around your event."}</p>
+      <a class="btn" target="_blank" rel="noopener" href="${waLink(`${CONFIG.customMessage} (${col.customName})`)}">Request ${esc(col.customName)}</a>
+    </article>`;
+  $("#grid").innerHTML = cards + custom;
+  $("#grid").setAttribute("aria-labelledby", "tab-" + current);
+  document.querySelectorAll("#grid img[data-label]").forEach(i => setImg(i, i.dataset.src, i.dataset.label));
+}
 
-</a>
+function switchTab(name) {
+  current = name; activeFilter = "All";
+  document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.tab === name));
+  renderFilters(); renderGrid();
+}
 
-<a
-href="https://wa.me/917986041515"
-target="_blank"
-class="btn btn-outline">
+/* Product detail modal */
+const dlg = $("#dlg");
+function openProduct(id) {
+  const p = COLLECTIONS[current].items.find(x => x.id == id); if (!p) return;
+  openItem = p; qty = 1; $("#qVal").textContent = 1;
+  setImg($("#dImg"), p.image, p.name); $("#dImg").alt = p.name;
+  $("#dName").textContent = p.name; $("#dPrice").textContent = p.price; $("#dDesc").textContent = p.description;
+  $("#dNote").textContent = (p.available ? "Available to order. " : "Currently unavailable. ") + (p.details || "Customisation is possible. Ask us on WhatsApp.");
+  const wa = $("#dWa");
+  wa.hidden = !p.available; updateWa();
+  dlg.showModal();
+}
+function updateWa() {
+  if (!openItem) return;
+  const base = openItem.message || `${CONFIG.enquiryIntro} ${openItem.name}.`;
+  $("#dWa").href = waLink(`${base} Quantity: ${qty}.`);
+}
+$("#qPlus").onclick = () => { qty = Math.min(qty + 1, 999); $("#qVal").textContent = qty; updateWa(); };
+$("#qMinus").onclick = () => { qty = Math.max(qty - 1, 1); $("#qVal").textContent = qty; updateWa(); };
+$("#dBack").onclick = () => dlg.close();
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
 
-WhatsApp Us
+/* Events */
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-tab]"); if (t) { switchTab(t.dataset.tab); $("#nav").classList.remove("open"); }
+  const f = e.target.closest("[data-f]"); if (f) { activeFilter = f.dataset.f; renderFilters(); renderGrid(); }
+  const o = e.target.closest("[data-open]"); if (o) openProduct(o.dataset.open);
+});
+$("#menuBtn").onclick = () => { const n = $("#nav"); const open = n.classList.toggle("open"); $("#menuBtn").setAttribute("aria-expanded", open); };
 
-</a>
+/* Fill contact details from CONFIG so they are edited in one place */
+setImg($("#heroImg"), CONFIG.heroImage, "KZ Creative");
+document.querySelectorAll("img[data-ph]").forEach(i => setImg(i, "", i.dataset.ph));
+document.querySelectorAll("[data-wa]").forEach(a => a.href = waLink(`Hi ${CONFIG.brand}! I'd like to ask about your products.`));
+$("#customBtn").href = waLink(CONFIG.customMessage);
+$("#fIg").href = CONFIG.instagram;
+$("#addr").textContent = CONFIG.address;
+$("#mapFrame").src = `https://www.google.com/maps?q=${encodeURIComponent(CONFIG.mapQuery)}&output=embed`;
+$("#dirBtn").href = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(CONFIG.mapQuery)}`;
+$("#copy").textContent = `\u00A9 ${new Date().getFullYear()} ${CONFIG.brand}. All rights reserved.`;
+$("#contactGrid").innerHTML = [
+  ["WhatsApp", `<a data-wa target="_blank" rel="noopener" href="${waLink("Hi!")}">Message us</a>`],
+  ["Instagram", `<a target="_blank" rel="noopener" href="${esc(CONFIG.instagram)}">${esc(CONFIG.instagramHandle)}</a>`],
+  ["Phone", `<a href="tel:${esc(CONFIG.phone.replace(/[^+\d]/g, ""))}">${esc(CONFIG.phone)}</a>`],
+  ["Email", `<a href="mailto:${esc(CONFIG.email)}">${esc(CONFIG.email)}</a>`],
+  ["Location", `<span>${esc(CONFIG.address)}</span>`],
+  ["Business hours", `<span>${esc(CONFIG.hours)}</span>`]
+].map(([h, v]) => `<div class="ct"><b>${h}</b>${v}</div>`).join("");
 
-</div>
-
-</div>
-
-
-<div class="hero-visual">
-
-<div class
+switchTab("candles");
+</script>
+</body>
+</html>
